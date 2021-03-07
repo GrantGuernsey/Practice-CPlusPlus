@@ -234,6 +234,27 @@ void sort(int a, int b, int c)
     }
 }
 
+void sortLoop(int a, int b, int c)
+{
+    int holder;
+  
+    for(int x = 0; x< 2; x++)
+    {
+        if(a > b)
+        {
+            holder = a;
+            a = b;
+            b = holder;
+        }
+        if(b > c)
+        {
+            holder = b;
+            b = c;
+            c = holder;
+        }
+    }
+    cout << a << "\t" << b << "\t" << c;
+}
 
 
 
@@ -241,4 +262,5 @@ int main()
 {
     displayData();
     sort(700,4,5);
+    sortLoop(700,4,5);
 }
